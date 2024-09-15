@@ -11,7 +11,7 @@ app = typer.Typer()
 MR_MANAGER = pooch.create(
     path=RAW_DATA_DIR,
     base_url="https://project.esss.dk/nextcloud/index.php/s/Diq9n3kITaEBtq7/",
-    version=__version__ + '+alpha',  # force Pooch to use the "main" folder to avoid re-downloading large files
+    version=__version__ if '+' in __version__ else __version__ + '+alpha', # force Pooch to use the "main" folder to avoid re-downloading large files
     version_dev="main",
     registry=None,
 )

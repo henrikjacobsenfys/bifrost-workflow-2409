@@ -14,7 +14,7 @@ to the version pinned in `requirements.txt`.
 > _**Note**:_
 > 
 > As of 2024 Sep 15, the `essspectroscopy` package is not on pip, please install
-> from source _before_ attempting to install this package.
+> from source inside the virtual environment  _before_ attempting to install this package.
 > 
 > `python -m pip install git+https://github.com/scipp/essspectroscopy.git@indirect`
 
@@ -90,8 +90,8 @@ To start the server and launch a web-browser from the root of the notebooks fold
 ## Project Organization
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
-├── README.md          <- This top-level README for developers using this project.
+├── LICENSE            <- Open-source license (BSD 3-Clause)
+├── README.md          <- This README for users of this project.
 ├── data
 │   ├── interim        <- Intermediate data that has been transformed.
 │   ├── meta           <- Data about the raw data files, used to fetch files from Nextcloud
@@ -99,29 +99,25 @@ To start the server and launch a web-browser from the root of the notebooks fold
 │       └── main       <- Files fetched from Nextcloud by Pooch
 │
 ├── notebooks          <- Jupyter notebooks. 
-                          Naming convention is a zero-padded number (for ordering),
-│                         and a short `_` delimited description, e.g.
-│                         `00_introduction`.
+│                         Naming convention is a zero-padded number (for ordering),
+│                         and a short `_` delimited description, e.g. `00_introduction`.
 │
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         bifrost2409 and configuration for tools like black
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+├── pyproject.toml     <- Project configuration file with package metadata and 
+│                         required dependencies for bifrost2409
 │
 ├── setup.cfg          <- Configuration file for flake8
 │
-└── bifrost2409   <- Source code for use in this project.
+└── bifrost2409        <- Source code for use in this project.
     │
-    ├── __init__.py             <- Makes bifrost2409 a Python module
+    ├── __init__.py    <- Makes bifrost2409 a Python module
     │
-    ├── config.py               <- Store useful variables and configuration
+    ├── config.py      <- Store useful variables and configuration
     │
-    ├── dataset.py              <- Scripts to download or generate data
+    ├── dataset.py     <- Scripts to download or generate data
     │
-    ├── nextcloud.py            <- Helper routines for creating Nextcloud metadata
+    ├── nextcloud.py   <- Helper routines for creating Nextcloud metadata
     │
-    └── plots.py                <- Code to create visualizations
+    └── plots.py       <- Code to create visualizations
 ```
 
 --------

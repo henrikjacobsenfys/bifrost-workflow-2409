@@ -9,15 +9,7 @@ but important new developments may be missing here.
 
 Compare the current release of 
 [![PyPI badge](http://img.shields.io/pypi/v/essspectroscopy.svg)](https://pypi.python.org/pypi/essspectroscopy)
-to the version pinned in `requirements.txt`.
-
-> _**Note**:_
-> 
-> As of 2024 Sep 15, the `essspectroscopy` package is not on pip, please install
-> from source inside the virtual environment  _before_ attempting to install this package.
-> 
-> `python -m pip install git+https://github.com/scipp/essspectroscopy.git@indirect`
-
+to the version pinned in `requirements.txt`, `v0.24.9.0`.
 
 --------
 

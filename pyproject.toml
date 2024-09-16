@@ -31,7 +31,9 @@ dependencies = [
 "ipympl==0.9.4",
 "mpltoolbox==24.5.1",
 "ipywidgets==8.1.5",
-"essspectroscopy",
+"essspectroscopy==0.24.9.0",
+"typer",
+"python-dotenv",
 ]
 
 dynamic = ["version"]

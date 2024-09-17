@@ -9,7 +9,7 @@ but important new developments may be missing here.
 
 Compare the current release of 
 [![PyPI badge](http://img.shields.io/pypi/v/essspectroscopy.svg)](https://pypi.python.org/pypi/essspectroscopy)
-to the version pinned in `requirements.txt`, `v0.24.9.0`.
+to the version pinned in `pyproject.toml`, `v0.24.9.0`.
 
 --------
 

@@ -70,11 +70,11 @@ You can download a subset of files by specifying only their names,
 or get other files from the Nextcloud folder if you know their path and name.
 
 --------
-## Run the Jupyter Hub server to examine the notebooks
+## Run the Jupyter Lab server to examine the notebooks
 To start the server and launch a web-browser from the root of the notebooks folder run
 ```cmd
 (workflow) $ cd notebooks
-(workflow) $ jupyter-hub
+(workflow) $ jupyter-lab
 ```
 
 --------

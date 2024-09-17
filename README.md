@@ -15,14 +15,44 @@ to the version pinned in `requirements.txt`, `v0.24.9.0`.
 
 ## Installation
 
-You are highly recommended to create a new virtual environment for this demonstration package.
-It should be possible to use a [Conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html)
-environment, but that may be overkill for these purposes.
+### Python
+You should have a Python interpreter available to you via your system command line.
+On an Apple macOS machine, this may be `python3` instead of the `python` command referenced below.
 
-Instead, use `python -m venv` or a faster near-drop-in `uv venv` part of [uv](https://docs.astral.sh/uv/),
-both available via `pip` if not already installed on your system.
+`scipp` is a dependency of the workflow, and currently requires a minimum Python version of 3.10.
+If your system Python is 3.9 or lower, please upgrade before continuing.
+You can check the version of Python available on your command line via, e.g.,
 
-Clone this repository to someplace on your machine, e.g.,
+```cmd
+$ python --version
+```
+
+Windows users without `python.exe` on their system path may benefit from installing Python via
+the `winget` utility, which should be available already on up-to-date Windows 10 and 11 systems.
+Search for an official Python package in `cmd.exe`, via 
+
+```cmd
+$ winget search Python.Python
+```
+
+There will be multiple versions available, pick one that you prefer (3.10 through 3.12 should all work)
+to install, e.g.,
+``` cmd
+$ winget install Python.Python.3.11
+```
+which will also setup your user's path variable to _use_ the installed Python (though you may need to close and reopen `cmd.exe` for this to take effect).
+
+### Git
+The `git` command should also be available on your command line.
+
+If you need to install `git` on macOS, you should install the Xcode Command Line tools via `xcode-select –-install` which ensures you have access to `git` and other tools.
+
+On Windows, `winget` can once again help if you need `git`; run, e.g., `winget install Git.Git`.
+
+### This repository
+You are highly recommended to create a new virtual environment for this demonstration package, via e.g., `python -m venv venv`.
+
+**Clone** this repository to someplace on your machine, e.g.,
 
 ```cmd
 $ mkdir -p ~/Documents/ESS/demos/
@@ -34,21 +64,16 @@ Create a virtual environment, inside the cloned repository directory;
 and activate it for the current terminal
 ```cmd
 $ cd workflow
-$ uv venv  # or `python -m venv .venv`
-$ source .venv/bin/activate
+$ python -m venv venv
+$ source venv/bin/activate
 ```
 
 Then install this package and its dependencies -- specifying `-e` makes an 'editable' install,
 which enables you to modify Python files in the repository and use them (without re-installing!)
 after re-loading the Python interpreter.
 
-If you have `uv` available, it also implements a faster `pip` via `uv pip`.
 ```cmd
-(workflow) $ uv pip install -e . 
-```
-Otherwise, standard `pip` will work fine as well, albeit more slowly.
-```cmd
-(.venv) $ python -m pip install -e .
+(venv) $ python -m pip install -e .
 ```
 
 --------
@@ -62,7 +87,7 @@ to download the files now; and a command line utility exists to do just that.
 
 Download all files by running 
 ```cmd
-(workflow) $ b2409-fetch
+(venv) $ b2409-fetch
 ```
 The command also accepts flags, e.g, `b2409-fetch --help` will show you that one
 option is `--files` _and_ which files it will fetch by default.
@@ -73,8 +98,8 @@ or get other files from the Nextcloud folder if you know their path and name.
 ## Run the Jupyter Lab server to examine the notebooks
 To start the server and launch a web-browser from the root of the notebooks folder run
 ```cmd
-(workflow) $ cd notebooks
-(workflow) $ jupyter-lab
+(venv) $ cd notebooks
+(venv) $ jupyter-lab
 ```
 
 --------
